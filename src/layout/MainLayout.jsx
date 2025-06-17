@@ -8,6 +8,7 @@ export default function MainLayout() {
   
   useEffect(() => {
     const meta = matches[matches.length - 1]?.handle?.meta;
+    console.log(meta)
     document.title = meta?.title || "Portfolio";
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [matches]);

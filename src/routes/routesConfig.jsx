@@ -7,6 +7,7 @@ import Projects from "../pages/Projects";
 import ProjectsCompleted from "../pages/projects/Completed";
 import ProjectsInProgress from "../pages/projects/InProgress";
 import ProjectsFuture from "../pages/projects/Future";
+import Maintenance from "../pages/Maintenance";
 
 export const routesConfig = [
   {
@@ -81,7 +82,7 @@ export const routesConfig = [
   },
   {
     path: "/contacto",
-    element: <Contact />,
+    element: <Maintenance />,
     meta: {
       title: "Contacto | Portfolio",
       navName: "Contacto",

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 
 export default function Footer() {
-  // Fecha de última actualización (formateada)
   const lastUpdate = "17/06/2025";
   
   return (

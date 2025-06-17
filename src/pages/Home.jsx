@@ -5,17 +5,16 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
     const handleDownloadCV = () => {
-        saveAs(cv, 'Hervas_Aragon_Sergio_CV.pdf'); // Asegúrate de tener el archivo en public/cv/
+        saveAs(cv, 'Hervas_Aragon_Sergio_CV.pdf');
     };
 
     return (
-        <section className="flex items-center justify-center p-6">
+        <section className="flex items-center justify-center p-6 bg-white">
             <div className="max-w-4xl mx-auto text-center">
-                {/* Sticker circular con sombra */}
                 <div className="mx-auto mb-10 w-60 h-60 rounded-md p-2">
                     <img
                         src={sticker}
-                        alt="Tu sticker"
+                        alt="sticker"
                         className="w-full h-full object-cover rounded-md"
                     />
                 </div>

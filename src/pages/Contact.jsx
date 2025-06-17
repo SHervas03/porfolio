@@ -7,20 +7,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica para enviar el formulario
     alert('Mensaje enviado con éxito!');
     formRef.current.reset();
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Encabezado con sticker */}
         <div className="text-center mb-12 flex flex-col items-center">
           <div className="w-52 h-52 overflow-hidden mb-6">
-            <img 
-              src={sticker} 
-              alt="Tu sticker" 
+            <img
+              src={sticker}
+              alt="sticker"
               className="w-full h-full object-cover"
             />
           </div>
@@ -34,7 +33,7 @@ export default function Contact() {
           {/* Tarjeta de información */}
           <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Información personal</h2>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-[#0083bf]/10 p-3 rounded-full mr-4">
@@ -95,7 +94,7 @@ export default function Contact() {
           {/* Formulario de contacto */}
           <div className="lg:col-span-2 bg-white p-8 rounded-xl shadow-md border border-gray-200">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Envíame un mensaje</h2>
-            
+
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

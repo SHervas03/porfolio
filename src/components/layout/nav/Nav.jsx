@@ -13,18 +13,15 @@ export default function Nav() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Memoize filtered routes to prevent unnecessary recalculations
   const mainNavItems = useMemo(() =>
     routesConfig.filter(route => route.meta?.showInNav !== false),
     [routesConfig]
   );
 
-  // Close dropdowns on route change
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  // Disable body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     return () => { document.body.style.overflow = 'auto'; };
@@ -143,7 +140,6 @@ export default function Nav() {
                 className="appearance-none bg-transparent border-none text-black py-2 pl-3 pr-8 rounded-md focus:outline-none focus:ring-2 focus:ring-[#009ee1] text-sm font-medium"
               >
                 <option value="es">ES</option>
-                <option value="en">EN</option>
               </select>
               <FiGlobe className="absolute right-2 top-2.5 text-black" aria-hidden="true" />
             </div>
@@ -254,7 +250,6 @@ export default function Nav() {
                 className="appearance-none bg-white border border-gray-300 text-black py-2 pl-3 pr-8 rounded-md focus:outline-none focus:ring-2 focus:ring-[#009ee1] text-sm font-medium w-full"
               >
                 <option value="es">Español (ES)</option>
-                <option value="en">English (EN)</option>
               </select>
               <FiGlobe className="absolute right-3 top-3 text-gray-500" aria-hidden="true" />
             </div>
