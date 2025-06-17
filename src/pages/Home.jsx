@@ -14,7 +14,7 @@ export default function Home() {
                 <div className="mx-auto mb-10 w-60 h-60 rounded-md p-2">
                     <img
                         src={sticker}
-                        alt="sticker"
+                        alt="Sticker de Home"
                         className="w-full h-full object-cover rounded-md"
                     />
                 </div>

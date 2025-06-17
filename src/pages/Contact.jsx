@@ -19,7 +19,7 @@ export default function Contact() {
           <div className="w-52 h-52 overflow-hidden mb-6">
             <img
               src={sticker}
-              alt="sticker"
+              alt="Sticker de contacto"
               className="w-full h-full object-cover"
             />
           </div>
