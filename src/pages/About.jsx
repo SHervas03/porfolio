@@ -156,7 +156,7 @@ export default function About() {
                 <div className="grid grid-cols-2 gap-4 mt-2 text-sm">
                   <div>
                     <p className="text-gray-500">Comprensión</p>
-                    <p className="text-gray-700">B2 (First Certificate)</p>
+                    <p className="text-gray-700">B1/B2</p>
                   </div>
                   <div>
                     <p className="text-gray-500">Expresión</p>
