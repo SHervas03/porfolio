@@ -81,7 +81,7 @@ export const routesConfig = [
   },
   {
     path: "/contacto",
-    element: <Maintenance />,
+    element: <Contact />,
     meta: {
       title: "Contacto | Portfolio",
       navName: "Contacto",
