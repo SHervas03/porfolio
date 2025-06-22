@@ -1,18 +1,65 @@
-import { useRef } from 'react';
-import { FaClock, FaEnvelope, FaCar, FaMapMarkerAlt, FaPaperPlane, FaPhone } from 'react-icons/fa';
+import { useRef, useState } from 'react';
+import { FaClock, FaEnvelope, FaCar, FaMapMarkerAlt, FaPaperPlane, FaPhone, FaSpinner } from 'react-icons/fa';
 import sticker from '../assets/2aeacec6-4d47-4213-9432-4ca0e2ac0e81.webp';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
   const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Mensaje enviado con éxito!');
-    formRef.current.reset();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sergiohervas9@gmail.com", {
+        method: "POST",
+        body: new FormData(formRef.current),
+      });
+
+      const data = await response.json();
+
+      if (data.success === "true") {
+        toast.success('Mensaje enviado con éxito!', {
+          duration: 4000,
+          position: 'top-center',
+          style: {
+            background: '#0083bf',
+            color: '#fff',
+          },
+        });
+        formRef.current.reset();
+      } else {
+        throw new Error('Error al enviar el mensaje');
+      }
+    } catch (error) {
+      toast.error(`Error: ${error.message}`, {
+        duration: 4000,
+        position: 'top-center',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <Toaster
+        toastOptions={{
+          success: {
+            style: {
+              background: '#0083bf',
+              color: 'white',
+            },
+          },
+          error: {
+            style: {
+              background: '#ff3333',
+              color: 'white',
+            },
+          },
+        }}
+      />
       <div className="max-w-6xl mx-auto">
         {/* Encabezado con sticker */}
         <div className="text-center mb-12 flex flex-col items-center">
@@ -51,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900">Horario</h3>
-                  <p className="text-gray-600">Lunes a Viernes: 10:00 - 18:00</p>
+                  <p className="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
                 </div>
               </div>
 
@@ -96,6 +143,13 @@ export default function Contact() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Envíame un mensaje</h2>
 
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              {/* Campos ocultos para FormSubmit */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value={window.location.href} />
+              <input type="text" name="_honey" className="hidden" />
+
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -152,10 +206,21 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-[#0083bf] text-white rounded-lg shadow hover:bg-[#006a99] transition-colors flex items-center justify-center"
+                disabled={isSubmitting}
+                className={`w-full md:w-auto px-8 py-3 bg-[#0083bf] text-white rounded-lg shadow hover:bg-[#006a99] transition-colors flex items-center justify-center ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                  }`}
               >
-                <FaPaperPlane className="mr-2" />
-                Enviar mensaje
+                {isSubmitting ? (
+                  <>
+                    <FaSpinner className="mr-2 animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <FaPaperPlane className="mr-2" />
+                    Enviar mensaje
+                  </>
+                )}
               </button>
             </form>
           </div>
