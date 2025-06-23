@@ -33,7 +33,7 @@ export default function Contact() {
         throw new Error('Error al enviar el mensaje');
       }
     } catch (error) {
-      toast.error(`Error: ${error.message}`, {
+      toast.error(`Errorrrrr: ${error.message}`, {
         duration: 4000,
         position: 'top-center',
       });

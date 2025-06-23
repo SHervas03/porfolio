@@ -1,6 +1,6 @@
 import { FaProjectDiagram, FaCode, FaChartLine, FaShieldAlt } from "react-icons/fa";
 import { MdWork, MdOutlineAutoAwesome } from "react-icons/md";
-import sticker from '../assets/9cc7b648-1a33-4d02-836c-2af4a8fe95f7.webp';
+import sticker from '../assets/a22e3746-7eee-45ca-9283-868cf2968799.webp';
 
 export default function Experience() {
   const experiences = [
