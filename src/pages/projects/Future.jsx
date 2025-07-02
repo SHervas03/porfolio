@@ -2,14 +2,20 @@ import { EmptyState } from "../../components/projects/EmptyState";
 import { FaRegLightbulb } from "react-icons/fa";
 
 export default function Future() {
-  
-  const projects = [];
+
+  const projects = [
+    {
+      id: 1,
+      title: "BetFriends - Apuestas entre grupos",
+      description: "App móvil para que amigos hagan apuestas divertidas dentro de su grupo o compitiendo contra otros grupos."
+    }
+  ];
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Proyectos Futuros</h1>
-        
+
         {projects.length > 0 ? (
           <div className="space-y-4">
             {projects.map((project, index) => (

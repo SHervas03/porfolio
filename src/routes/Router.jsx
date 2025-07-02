@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { routesConfig } from "./routesConfig";
 import MainLayout from "../layout/MainLayout";
 import NotFound from "../pages/NotFound";
@@ -18,12 +18,17 @@ export const router = createBrowserRouter([
         }))
       })
     }))
-  },{
-    path: "*",
+  },
+  {
+    path: "404",
     element: <NotFound />,
     meta: {
       title: "Página no encontrada | Portfolio",
-      showInNav: false
-    }
+      showInNav: false,
+    },
+  },
+  {
+    path: "*",
+    element: <Navigate to="/404" replace />,
   }
 ]);
