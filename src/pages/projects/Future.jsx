@@ -23,11 +23,6 @@ export default function Future() {
       id: 4,
       title: "Curso Udemy - Spring",
       description: "Spring Framework 6 & Spring Boot 3 desde cero a experto."
-    },
-    {
-      id: 5,
-      title: "Curso Udemy - Docker",
-      description: "Aprende Docker de cero a experto: con Compose y Swarm"
     }
   ];
 

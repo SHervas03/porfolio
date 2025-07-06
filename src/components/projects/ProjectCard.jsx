@@ -17,7 +17,7 @@ export const ProjectCard = ({ project }) => {
       <div className="flex items-center space-x-4 mt-auto">
         {project.githubUrl && (
           <a href={project.githubUrl} target="_blank" rel="noopener" className="flex items-center text-gray-700 hover:text-[#0083bf] transition-colors text-sm">
-            <FaGithub className="mr-2" /> Código
+            <FaGithub className="mr-2" /> Repositorio
           </a>
         )}
         {project.demoUrl && (

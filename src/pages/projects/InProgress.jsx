@@ -13,6 +13,13 @@ export default function InProgress() {
       githubUrl: "https://github.com/SHervas03/porfolio",
       demoUrl: "https://porfolio-sergio-hervas-aragon.netlify.app/"
     },
+    {
+      id: 2,
+      title: "Curso Udemy - Docker",
+      description: "Aprende Docker de cero a experto: con Compose y Swarm",
+      tags: [],
+      githubUrl: "https://github.com/SHervas03/Curso-Udemy-Docker"
+    }
 
   ];
 
