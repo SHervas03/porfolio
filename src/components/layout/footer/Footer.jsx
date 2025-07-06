@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 
 export default function Footer() {
-  const lastUpdate = "02/07/2025";
+  const lastUpdate = "06/07/2025";
   
   return (
     <footer className="bg-white py-8 border-t border-gray-200">

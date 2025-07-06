@@ -8,6 +8,26 @@ export default function Future() {
       id: 1,
       title: "BetFriends - Apuestas entre grupos",
       description: "App móvil para que amigos hagan apuestas divertidas dentro de su grupo o compitiendo contra otros grupos."
+    },
+    {
+      id: 2,
+      title: "Friends Awards - Premios entre amigos",
+      description: "Web interactiva para votar premios divertidos entre amigos, con nominaciones y resultados en tiempo real."
+    },
+    {
+      id: 3,
+      title: "Curso Udemy - React y TypeScript",
+      description: "Guia completa de creacion de más de 10 proyectos."
+    },
+    {
+      id: 4,
+      title: "Curso Udemy - Spring",
+      description: "Spring Framework 6 & Spring Boot 3 desde cero a experto."
+    },
+    {
+      id: 5,
+      title: "Curso Udemy - Docker",
+      description: "Aprende Docker de cero a experto: con Compose y Swarm"
     }
   ];
 

@@ -7,12 +7,6 @@ export default function InProgress() {
   const projects = [
     {
       id: 1,
-      title: "Prueba técnica IDBOTIC",
-      description: "Diseñar e implementar un sistema Cliente-Servidor TCP en .NET 8.0 que sea limpio, mantenible y bien documentado.",
-      tags: ["C#", "Docker Compose", "MongoDB"]
-    },
-    {
-      id: 2,
       title: "Mi porfolio personal",
       description: "Desarrollo de un sitio web personal para mostrar mis proyectos, habilidades y experiencia profesional con diseño responsive.",
       tags: ["React", "TailwindCss"],

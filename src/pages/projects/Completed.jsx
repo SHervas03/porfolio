@@ -5,23 +5,22 @@ import { FaRegSmile } from "react-icons/fa";
 export default function Completed() {
 
   const projects = [
-    {
-      id: 1,
-      title: "Caso de estudio de una solución de Business Intelligence",
-      description: "Arquitectura de análisis de datos, modelado de base de datos y ETL.",
-      tags: ["Python", "SQL", "Pentaho"],
-      githubUrl: "https://github.com/SHervas03/PEC-Python.git",
-      reportUrl: "/memorias/PEC.pdf"
-    },
-    {
-      id: 2,
-      title: "TFM: Detección de residuos mediante Computer Vision",
-      description: "Sistema basado en VGG16 optimizado con Optuna para clasificar 6 tipos de residuos.",
-      tags: ["Optuna", "Scikit-learn", "TensorFlow", "Python"],
-      githubUrl: "https://github.com/SHervas03/TFM",
-      reportUrl: "/memorias/tfm.pdf"
-    }
-
+    // {
+    //   id: 1,
+    //   title: "Caso de estudio de una solución de Business Intelligence",
+    //   description: "Arquitectura de análisis de datos, modelado de base de datos y ETL.",
+    //   tags: ["Python", "SQL", "Pentaho"],
+    //   githubUrl: "https://github.com/SHervas03/PEC-Python.git",
+    //   reportUrl: "/memorias/PEC.pdf"
+    // },
+    // {
+    //   id: 2,
+    //   title: "TFM: Detección de residuos mediante Computer Vision",
+    //   description: "Sistema basado en VGG16 optimizado con Optuna para clasificar 6 tipos de residuos.",
+    //   tags: ["Optuna", "Scikit-learn", "TensorFlow", "Python"],
+    //   githubUrl: "https://github.com/SHervas03/TFM",
+    //   reportUrl: "/memorias/tfm.pdf"
+    // }
   ];
 
   return (
